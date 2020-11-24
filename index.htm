@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tw">
+<head>
+<meta charset="UTF-8">
+<title>JQ Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style type="text/css">
+p{color:red;
+margin: 5px;
+cursor: pointer;}
+p:hover{background:yellow;}
+.crying{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background: rgba(0,0,0,0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fause{position: fixed;
+       top: 0;
+       right: 0;
+       width: 25%;
+       height: 25%;
+       z-index: 10;
+       display: flex;
+       justify-content: right;
+       align-items: right;
+}
+</style>
+</head>
+<body>
+<p>產品介紹</p>
+<h1>哭阿人形自走炮</h1>
+<div class="crying">
+	<img src="https://truth.bahamut.com.tw/s01/202003/c7d104d708825baf7343aa11134f3ae4.JPG">
+	
+</div>
+<div class="fause">
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/c6/False.svg">
+</div>
+<script type="text/javascript">
+	$('p').click(function(){
+		$('.crying').slideToggle();
+$('.fause').slideToggle();
+	
+	});
+	$('.fause').click(function(){
+		$('.fause').slideToggle();
+$('.crying').slideToggle();
+	
+	});
+</script>
+
+</body>
+</html>
